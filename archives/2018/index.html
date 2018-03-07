@@ -152,17 +152,14 @@
     <div class="post-content">
         <div class="post-excerpt">
             
-                <p>#python中的enumerate语句</p>
-<p>##enumerate()用法说明</p>
-<ul>
+                <h1 id="python中的enumerate语句"><a href="#python中的enumerate语句" class="headerlink" title="python中的enumerate语句"></a>python中的enumerate语句</h1><h2 id="enumerate-用法说明"><a href="#enumerate-用法说明" class="headerlink" title="enumerate()用法说明"></a>enumerate()用法说明</h2><ul>
 <li>enumerate()用于遍历序列中的元素以及他们的下标。</li>
 <li>enumerate()是python的内置函数。</li>
 <li>enumerate的意思是枚举，列举的意思。</li>
 <li>对于一个可迭代的或者可遍历的对象，enumerate将其组成一个索引序列，利用它同时获得索引和值</li>
 <li>enumerate多由于for语句中得到计数。</li>
 </ul>
-<p>##enumerate()的语法和用法</p>
-<ul>
+<h2 id="enumerate-的语法和用法"><a href="#enumerate-的语法和用法" class="headerlink" title="enumerate()的语法和用法"></a>enumerate()的语法和用法</h2><ul>
 <li><p>语法<br><code>enumerate（Iterable，start)</code></p>
 <ul>
 <li>语句中的第一个元素<code>Iterable</code>代表我们要进行遍历的序列（列表，字典，元组，……）。</li>
@@ -176,7 +173,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for index, item in enumerate(list1, 1):</span><br><span class="line">    print index, item</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">1 这</span><br><span class="line">2 是</span><br><span class="line">3 一个</span><br><span class="line">4 测试</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>##enumerate()例子<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(L))</span><br><span class="line">[(<span class="number">0</span>, <span class="number">1</span>), (<span class="number">1</span>, <span class="number">2</span>), (<span class="number">2</span>, <span class="number">3</span>), (<span class="number">3</span>, <span class="number">4</span>), (<span class="number">4</span>, <span class="number">5</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(L,<span class="number">4</span>))</span><br><span class="line">[(<span class="number">4</span>, <span class="number">1</span>), (<span class="number">5</span>, <span class="number">2</span>), (<span class="number">6</span>, <span class="number">3</span>), (<span class="number">7</span>, <span class="number">4</span>), (<span class="number">8</span>, <span class="number">5</span>)]</span><br></pre></td></tr></table></figure></p>
+<h2 id="enumerate-例子"><a href="#enumerate-例子" class="headerlink" title="enumerate()例子"></a>enumerate()例子</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(L))</span><br><span class="line">[(<span class="number">0</span>, <span class="number">1</span>), (<span class="number">1</span>, <span class="number">2</span>), (<span class="number">2</span>, <span class="number">3</span>), (<span class="number">3</span>, <span class="number">4</span>), (<span class="number">4</span>, <span class="number">5</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(L,<span class="number">4</span>))</span><br><span class="line">[(<span class="number">4</span>, <span class="number">1</span>), (<span class="number">5</span>, <span class="number">2</span>), (<span class="number">6</span>, <span class="number">3</span>), (<span class="number">7</span>, <span class="number">4</span>), (<span class="number">8</span>, <span class="number">5</span>)]</span><br></pre></td></tr></table></figure>
 <ul>
 <li>如果要统计文件的行数，可以这样写，速度会更快：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> index, line <span class="keyword">in</span> enumerate(open(filepath,<span class="string">'r'</span>))： </span><br><span class="line">    count += <span class="number">1</span></span><br></pre></td></tr></table></figure>
 </li>
