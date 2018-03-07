@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>文章归档: 2018/2 | 张开元的诗</title>
+    <title>文章归档: 2018/3 | 张开元的诗</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="Java,Python, 前端, Web, 张开元, 前端开发" >
     <meta name="description" content="张开元个人的小站" >
@@ -56,19 +56,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/archives/2018/02/index.html" class="item ">
+            <li rel="/archives/2018/03/index.html" class="item ">
                 <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/archives/2018/02/index.html" class="item ">
+            <li rel="/archives/2018/03/index.html" class="item ">
                 <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/archives/2018/02/index.html" class="item ">
+            <li rel="/archives/2018/03/index.html" class="item ">
                 <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/archives/2018/02/index.html" class="item ">
+            <li rel="/archives/2018/03/index.html" class="item ">
                 <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -128,20 +128,20 @@
     <header>
         <!-- 标签这有且只能显示一个 -->
         
-            <a href="javascript: void(0);" class="cat">未分类</a>
+        <a class="cat-link" href="/categories/Web技术/">Web技术</a>
         
         <!-- 文章标题 -->
         
     <h3 class="post-title">
-    	<a href="/2018/02/25/hello-world/">
-    		Hello World
+    	<a href="/2018/03/08/python-enumerate用法/">
+    		python.enumerate用法
     	</a>
     </h3>
 
     </header>
     <p class="post-meta">
-        Jelon 发表于
-        <time datetime="2018-02-25T05:39:10.020Z">2018-02-25</time>
+        zky001 发表于
+        <time datetime="2018-03-07T17:30:49.747Z">2018-03-08</time>
         &nbsp;&nbsp;
         <span class="post-tags">
             标签：
@@ -152,25 +152,45 @@
     <div class="post-content">
         <div class="post-excerpt">
             
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <p>#python中的enumerate语句</p>
+<p>##enumerate()用法说明</p>
+<ul>
+<li>enumerate()用于遍历序列中的元素以及他们的下标。</li>
+<li>enumerate()是python的内置函数。</li>
+<li>enumerate的意思是枚举，列举的意思。</li>
+<li>对于一个可迭代的或者可遍历的对象，enumerate将其组成一个索引序列，利用它同时获得索引和值</li>
+<li>enumerate多由于for语句中得到计数。</li>
+</ul>
+<p>##enumerate()的语法和用法</p>
+<ul>
+<li><p>语法<br><code>enumerate（Iterable，start)</code></p>
+<ul>
+<li>语句中的第一个元素<code>Iterable</code>代表我们要进行遍历的序列（列表，字典，元组，……）。</li>
+<li>语句中的第二个元素<code>start</code>代表索引的起始值，默认是0。</li>
+</ul>
+</li>
+<li><p>如果对一个列表，既要遍历索引又要遍历元素时，可以这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for index, item in enumerate(list1):</span><br><span class="line">    print index, item</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">0 这</span><br><span class="line">1 是</span><br><span class="line">2 一个</span><br><span class="line">3 测试</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>enumerate还可以接收第二个参数，用于指定索引起始值，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list1 = [&quot;这&quot;, &quot;是&quot;, &quot;一个&quot;, &quot;测试&quot;]</span><br><span class="line">for index, item in enumerate(list1, 1):</span><br><span class="line">    print index, item</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">1 这</span><br><span class="line">2 是</span><br><span class="line">3 一个</span><br><span class="line">4 测试</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>##enumerate()例子<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(L))</span><br><span class="line">[(<span class="number">0</span>, <span class="number">1</span>), (<span class="number">1</span>, <span class="number">2</span>), (<span class="number">2</span>, <span class="number">3</span>), (<span class="number">3</span>, <span class="number">4</span>), (<span class="number">4</span>, <span class="number">5</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(L,<span class="number">4</span>))</span><br><span class="line">[(<span class="number">4</span>, <span class="number">1</span>), (<span class="number">5</span>, <span class="number">2</span>), (<span class="number">6</span>, <span class="number">3</span>), (<span class="number">7</span>, <span class="number">4</span>), (<span class="number">8</span>, <span class="number">5</span>)]</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>如果要统计文件的行数，可以这样写，速度会更快：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> index, line <span class="keyword">in</span> enumerate(open(filepath,<span class="string">'r'</span>))： </span><br><span class="line">    count += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
             
             <p class="more">
-                <a href="/2018/02/25/hello-world/">阅读剩下更多</a>
+                <a href="/2018/03/08/python-enumerate用法/">阅读剩下更多</a>
             </p>
         </div>
         <div class="post-thumbnail" data-img="">
-            <a href="/2018/02/25/hello-world/" title="Hello World">
+            <a href="/2018/03/08/python-enumerate用法/" title="python.enumerate用法">
                 
-                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图" >
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图" >
                 
             </a>
         </div>
