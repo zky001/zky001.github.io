@@ -133,6 +133,64 @@
         <!-- 文章标题 -->
         
     <h3 class="post-title">
+    	<a href="/2018/03/08/两数相加问题-md/">
+    		两数相加问题.md
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        zky001 发表于
+        <time datetime="2018-03-08T06:48:13.453Z">2018-03-08</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/leetcode-python/" title="leetcode python">leetcode python</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>给定两个非空链表来代表两个非负数，位数按照逆序方式存储，它们的每个节点只存储单个数字。将这两数相加会返回一个新的链表。</p>
+<p>你可以假设除了数字 0 之外，这两个数字都不会以零开头。</p>
+<p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span><br><span class="line">输出：7 -&gt; 0 -&gt; 8</span><br><span class="line">原因：342 + 465 = 807</span><br></pre></td></tr></table></figure></p>
+<p>思路非常清晰，首先两个链表长度得一致，同时逆序操作，其次返回链表时也为逆序，首先输出的📖链表头两个元素之和。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode(object):</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution(object):</span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type l1: ListNode</span><br><span class="line">        :type l2: ListNode</span><br><span class="line">        :rtype: ListNode</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">        head = ListNode((l1.val + l2.val) % 10)</span><br><span class="line">        current = head</span><br><span class="line">        carry = (l1.val + l2.val) // 10</span><br><span class="line">        while l1.next is not None or l2.next is not None:</span><br><span class="line">            num1 = 0</span><br><span class="line">            num2 = 0</span><br><span class="line">            if l1.next is not None:</span><br><span class="line">                l1 = l1.next</span><br><span class="line">                num1 = l1.val</span><br><span class="line">            if l2.next is not None:</span><br><span class="line">                l2 = l2.next</span><br><span class="line">                num2 = l2.val</span><br><span class="line">            current.next = ListNode((num1 + num2 + carry) % 10)</span><br><span class="line">            carry = (num1 + num2 + carry) // 10</span><br><span class="line">            current = current.next</span><br><span class="line">        if carry != 0:</span><br><span class="line">            current.next = ListNode(carry)</span><br><span class="line">        return head</span><br></pre></td></tr></table></figure></p>
+<p>给定一个整数数列，找出其中和为特定值的那两个数。</p>
+<p>你可以假设每个输入都只会有一种答案，同样的元素不能被重用。</p>
+<p>示例:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">给定 nums = [2, 7, 11, 15], target = 9</span><br><span class="line"></span><br><span class="line">因为 nums[0] + nums[1] = 2 + 7 = 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure></p>
+<p>使用dict<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    # @return a tuple, (index1, index2)</span><br><span class="line">    def twoSum(self, num, target):</span><br><span class="line">        dict = &#123;&#125;</span><br><span class="line">        for i in xrange(len(num)):</span><br><span class="line">            x = num[i]</span><br><span class="line">            if target-x in dict:</span><br><span class="line">                return (dict[target-x]+1, i+1)</span><br><span class="line">            dict[x] = i</span><br></pre></td></tr></table></figure></p>
+
+            
+            <p class="more">
+                <a href="/2018/03/08/两数相加问题-md/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="/2018/03/08/两数相加问题-md/" title="两数相加问题.md">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章 -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Web技术/">Web技术</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
     	<a href="/2018/03/08/python-enumerate用法/">
     		python.enumerate用法
     	</a>
@@ -270,12 +328,12 @@
     
     <li>
         <a href="/categories/Web技术/">Web技术</a>
-        <span class="badge">(1)</span>
+        <span class="badge">(2)</span>
     </li>
     
     <li>
         <a href="/categories/Web技术/生活琐事/">生活琐事</a>
-        <span class="badge">(1)</span>
+        <span class="badge">(2)</span>
     </li>
     
 </ul>
@@ -286,6 +344,8 @@
         <h3 class="widget-hd"><strong>热门标签</strong></h3>
         <!-- 文章标签 -->
 <div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/leetcode-python/" title="leetcode python">leetcode python (1)</a>
   
 </div>
     </section>
